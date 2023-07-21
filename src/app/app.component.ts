@@ -12,5 +12,8 @@ export class AppComponent {
     email: 'joaquim@gmail.com',
     role: 'Admin',
   }
+  
+  userAddress: string = "Rua 38, Quadra 14 Lote 08" 
+
   title = 'curso_angular_yt';
 }
