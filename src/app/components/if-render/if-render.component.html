@@ -1,0 +1,29 @@
+
+<!--
+ngIf e uma diretiva que inclui condicionalmente um modelo com base no valor de uma 
+expressao transformada em booleano. Quando a expressao e avaliada como verdadeira
+o angular renderiza o modelo fornecido.
+-->
+
+<!--Verificando se a variavel 'name' e igual o nome 'Matheus'-->
+<!--Se a verificacao for valida ou seja, verdadeira a tag h2 com o nome sera renderizado-->
+<!--Se nao ele renderizara um h2 com a mensagem 'O nome nao foi encontrado!'-->
+
+<div class="class">
+
+    <div *ngIf="canShow">
+        Estamos mostrando esse conteundo porque foi permitido
+    </div>
+    <h2 *ngIf="name == 'Matheus'; else nameNotFound ">O nome e {{name}}</h2>
+    <ng-template #nameNotFound>
+        <div>
+            <h2>O nome nao foi encontrado!</h2>
+        </div>
+    </ng-template>
+</div>
+
+<!--No 'else' esta sendo criado um valor/variavel que esta sendo passado como atributo
+da tag <ng-template> com o sinal de '#' com ele e possivel 'linkar' sendo assim possivel a renderi-
+zacao da Mensagem '>O nome nao foi encontrado!', caso nao der sucesso na condicao if -->
+<!--Com o <ng-template> e possivel definir um conteudo quando direta ou indiretamente
+o instrui especificamente a faze-lo. -->
