@@ -4,16 +4,22 @@
         <li *ngFor="let animal of animals">
             Nome: {{animal.name}} -
             Especie: {{animal.type}}
+            <button (click)="showAge(animal)">Show age</button>
         </li>
+        
     </ul>
+    <div *ngIf="animal.age === 1">
+        <h3>{{ animalDetails }}</h3>
+    </div>
 </div>
 
 <div class="class">
-    <h2>Pessoas:</h2>
+    <h1>Pessoas:</h1>
     <ul>
         <li *ngFor="let people of peoples">
-            Nome: {{people.name}} -
-            Idade: {{people.age}}
+            <app-parent-data-two [name]="people.name"  [age]="people.age" [cpf]="people.cpf" [phone_number]="people.phone_number"/>
         </li>
     </ul>
+
+    
 </div>
