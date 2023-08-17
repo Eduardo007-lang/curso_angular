@@ -13,6 +13,7 @@ import { ChangeNumberComponent } from './components/change-number/change-number.
 import { EmitterTesteComponent } from './components/emitter-teste/emitter-teste.component';
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { ParentDataTwoComponent } from './components/parent-data-two/parent-data-two.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ParentDataTwoComponent } from './components/parent-data-two/parent-data
     ChangeNumberComponent,
     EmitterTesteComponent,
     ListRenderComponent,
-    ParentDataTwoComponent
+    ParentDataTwoComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,
