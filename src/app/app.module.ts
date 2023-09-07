@@ -14,6 +14,7 @@ import { EmitterTesteComponent } from './components/emitter-teste/emitter-teste.
 import { ListRenderComponent } from './components/list-render/list-render.component';
 import { ParentDataTwoComponent } from './components/parent-data-two/parent-data-two.component';
 import { PipeComponent } from './components/pipe/pipe.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PipeComponent } from './components/pipe/pipe.component';
     EmitterTesteComponent,
     ListRenderComponent,
     ParentDataTwoComponent,
-    PipeComponent
+    PipeComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
