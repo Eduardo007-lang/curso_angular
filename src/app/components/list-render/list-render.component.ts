@@ -11,12 +11,7 @@ import { People } from 'src/app/models/people';
 })
 export class ListRenderComponent implements OnInit {
 
-  animals: Animal[] = [
-    {name:'Turca', type: 'Dog', age: 2},
-    {name:'Tom', type: 'Cat', age: 1},
-    {name:'Frida', type: 'Dog',age: 1},
-    {name:'Bob', type: 'Horse', age: 4},
-  ]
+  animals: Animal[] = [];
 
   animal: Animal = {
     name: 'teste',
@@ -38,7 +33,7 @@ export class ListRenderComponent implements OnInit {
   constructor(private listService: ListService ){}
 
   ngOnInit(): void {
-      
+      this.getAnimals();
   }
 
   showAge(animal: Animal){
@@ -52,6 +47,15 @@ export class ListRenderComponent implements OnInit {
 
   removePeople(people: People){
    this.peoples =  this.listService.removePeople(this.peoples, people);
+
+  }
+
+
+  getAnimals(): void {
+    this.listService.getAll().subscribe((animals) => {
+      this.animals = animals
+      console.log("Teste", animals);
+    });
   }
 
 }

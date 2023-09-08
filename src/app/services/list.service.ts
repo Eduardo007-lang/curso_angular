@@ -1,6 +1,8 @@
 import { People } from './../models/people';
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { Animal } from '../Animal';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 
 @Injectable({
@@ -8,7 +10,10 @@ import { Animal } from '../Animal';
 })
 export class ListService {
 
-  constructor() { }
+  private apiUrl = 'http://localhost:3000/animals'
+
+  constructor(private http: HttpClient) { }
+
 
   remove(animals: Animal[], animal: Animal){
 
@@ -18,6 +23,10 @@ export class ListService {
 
   removePeople(peoples: People[], people: People){
     return peoples.filter((p) => people.name !== p.name);
+  }
+
+  getAll(): Observable<Animal[]> {
+    return this.http.get<Animal[]>(this.apiUrl);
   }
 
 }
