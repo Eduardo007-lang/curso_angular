@@ -15,6 +15,7 @@ import { ListRenderComponent } from './components/list-render/list-render.compon
 import { ParentDataTwoComponent } from './components/parent-data-two/parent-data-two.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { HeaderComponent } from './components/header/header.component';
+import { ItemDetailsComponent } from './components/item-details/item-details.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { HeaderComponent } from './components/header/header.component';
     ListRenderComponent,
     ParentDataTwoComponent,
     PipeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
